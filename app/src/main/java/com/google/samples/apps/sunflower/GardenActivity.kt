@@ -27,6 +27,7 @@ class GardenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView<ActivityGardenBinding>(this, R.layout.activity_garden)
+        if (true)
+            setContentView<ActivityGardenBinding>(this, R.layout.activity_garden)
     }
 }
