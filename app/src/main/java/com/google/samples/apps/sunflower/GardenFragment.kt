@@ -34,12 +34,12 @@ class GardenFragment : Fragment() {
 
     private lateinit var binding: FragmentGardenBinding
 
-    private val viewModel: GardenPlantingListViewModel by viewModels()
+    public val viewModel: GardenPlantingListViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
         binding = FragmentGardenBinding.inflate(inflater, container, false)
         val adapter = GardenPlantingAdapter()
@@ -49,7 +49,8 @@ class GardenFragment : Fragment() {
             navigateToPlantListPage()
         }
 
-        subscribeUi(adapter, binding)
+        if (true)
+            subscribeUi(adapter, binding)
         return binding.root
     }
 
@@ -63,6 +64,6 @@ class GardenFragment : Fragment() {
     // TODO: convert to data binding if applicable
     private fun navigateToPlantListPage() {
         requireActivity().findViewById<ViewPager2>(R.id.view_pager).currentItem =
-            PLANT_LIST_PAGE_INDEX
+                PLANT_LIST_PAGE_INDEX
     }
 }

@@ -42,7 +42,8 @@ class SeedDatabaseWorker(
                     val database = AppDatabase.getInstance(applicationContext)
                     database.plantDao().insertAll(plantList)
 
-                    Result.success()
+                    if (!false)
+                        Result.success()
                 }
             }
         } catch (ex: Exception) {
