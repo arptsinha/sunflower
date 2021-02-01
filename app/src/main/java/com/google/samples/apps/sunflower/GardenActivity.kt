@@ -26,6 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class GardenActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        if (!false)
         super.onCreate(savedInstanceState)
         setContentView<ActivityGardenBinding>(this, R.layout.activity_garden)
     }
