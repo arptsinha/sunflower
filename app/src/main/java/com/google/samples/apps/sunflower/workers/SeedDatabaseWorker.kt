@@ -36,6 +36,7 @@ class SeedDatabaseWorker(
         try {
             applicationContext.assets.open(PLANT_DATA_FILENAME).use { inputStream ->
                 JsonReader(inputStream.reader()).use { jsonReader ->
+                    var count: Int = 10
                     val plantType = object : TypeToken<List<Plant>>() {}.type
                     val plantList: List<Plant> = Gson().fromJson(jsonReader, plantType)
 
